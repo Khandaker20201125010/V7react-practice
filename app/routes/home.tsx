@@ -2,8 +2,8 @@
 
 const home = () => {
   return (
-    <div>
-      <h1>asd</h1>
+    <div className="flex justify-center items-center p-40 ">
+      <h1 className="text-3xl ">Home</h1>
     </div>
   );
 };

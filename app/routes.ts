@@ -1,11 +1,9 @@
-import { type RouteConfig, index } from "@react-router/dev/routes";
+import { type RouteConfig, index, route } from "@react-router/dev/routes";
 
 export default [
-    index("routes/home.tsx")
+  // Define the index route
+  index("routes/home.tsx"),
 
-
-
-
-
-
+  // Define a route for Redux
+  route("redux", "routes/redux.tsx"),
 ] satisfies RouteConfig;
