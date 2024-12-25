@@ -1,18 +1,19 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { decrement, increment, incrementByValue } from "../../Redux/Features/Counter/counterSlice";
 
 const Counter = () => {
     const {count} = useSelector((state) => state.counter);
-    console.log(count);
+    const dispatch = useDispatch();
   return (
     <div className="flex gap-5 flex-col justify-center text-center mx-auto">
-      <button className="btn  bg-green-500 ">Increment</button>
+      <button onClick={() => dispatch(increment())} className="btn  bg-orange-500 ">Increment</button>
+      <button onClick={() => dispatch(incrementByValue(5))} className="btn  bg-green-500 ">Increment  by 5</button>
       <div >
-        <h1>{countgit }</h1>
+        <h1>{count}</h1>
       </div>
-      <button className="btn bg-red-500">Decrement</button>
+      <button onClick={() => dispatch(decrement())} className="btn bg-red-500">Decrement</button>
       <div>
-        <h1>0</h1>
+      <h1>{count}</h1>
       </div>
     </div>
   );
