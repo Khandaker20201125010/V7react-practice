@@ -6,6 +6,7 @@ import logger from './Middlewares/logger'
   reducer: {
     counter: counterReducer,
   },
+  //logger
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(logger),
 })
